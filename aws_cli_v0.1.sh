@@ -121,7 +121,7 @@ echo "subnet1 association with routetable is : "$sub_asso
 #______________________________________________________________________________________________________________________________# 
 sub_asso=$(aws ec2 associate-route-table --subnet-id $subnet2 \
                                          --route-table-id $rt_id \
-                                         --query AssociationState.State 
+                                         --query AssociationState.State \
                                          --output text)
 
 echo "subnet2 association with routetable is : "$sub_asso
