@@ -4,18 +4,18 @@ def call() {
     stages{
         stage('vcs'){
         steps{
-            script{
-                git url:'https://github.com/saisatyateja/cli_lib.git',
-                    branch:'main'
-            }
+            step{
+            git url:'https://github.com/saisatyateja/cli_lib.git',
+            branch:'main'
+            
            }
         }
         stage('build'){
             steps{
-                script{
+                step{
                   sh 'bash aws_cli_v0.1.sh'
                 }
-            }
+           }
         }
     }
 }
